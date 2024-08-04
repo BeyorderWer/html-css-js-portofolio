@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+
+.kaisei-opti-regular {
+  font-family: "Kaisei Opti", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+header {
+    background-color: #3E567C; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+body {
+    background-color: #272727;
+    color: #FFFFFF;
+    font-family: "Kaisei Opti", serif;
+    font-weight: 700;
+    font-style: bold;
+    margin: 0;
+}
+
+.logo {
+    font-size: 69px;
+    font-weight: bold;
+}
+
+/* Mengatur tampilan tautan navigasi */
+.nav-links {
+    justify-self: center;
+    list-style: none;
+    display: flex;
+    gap: 20px; 
+}
+
+nav,
+.nav-links li {
+    display: flex;
+}
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+    margin: 10px;
+}
+
+/* Mengatur tampilan gambar logo */
+.nav-links li a img {
+    width: 40px; /* Lebar gambar logo */
+    height: 40px; /* Tinggi gambar logo */
+    transition: transform 0.2s;
+}
+
+/* Mengatur efek zoom saat hover pada gambar logo */
+.nav-links li a:hover img {
+    transform: scale(1.3); /* Zoom efek pada hover */
+}
+
+.logo-container {
+    text-align: left;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.logo__p1 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    margin: 50px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.profile-description {
+    text-align: center; 
+    font-weight: bold;
+    font-size: 30px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+.profile-description.show {
+    transform: translateX(0);
+    opacity: 1; 
+}
+
+.profile-description p {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #f0f0f0;
+    color: inherit;
+}
+
+#portofolio {
+    text-align: center;
+    font-size: 32px;
+    color: #ffffff;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.resume-button {
+    background-color: #3E567Cff;
+    color: #FFFFFF;
+    border: 2px solid #24344Dff;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.resume-button:hover {
+    transform: scale(1.1);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project {
+    background-color: #24344D;
+    border: 2px solid black; /* Black border added */
+    display: flex;
+    flex-direction: column; /* Stack video and description vertically */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project:hover {
+    background-color: #3E567C;
+}
+
+.project-video {
+    flex: 1; /* Make video take up available space */
+}
+
+.project-video video {
+    width: 100%;
+    height: auto;
+}
+
+.project-description {
+    padding: 10px;
+    color: white;
+    flex: 1; /* Make description take up available space */
+}
+
+.project-description h3 {
+    margin-top: 0;
+}
+
+.project-description p {
+    margin: 5px 0;
+}
+
+.project-description a {
+    color: white;
+    text-decoration: underline;
+}
+
+#education {
+    padding: 20px;
+    text-align: center;
+}
+
+.education {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.education-item {
+    background-color: #24344D;
+    border: 10px solid #3E567C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+    transition: background-color 0.3s ease;
+}
+
+
+
+.education-description {
+    color: white;
+    text-align: center;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 40px; /* Adjust logo size for mobile */
+    }
+
+    .logo__p1 {
+        font-size: 20px; /* Adjust logo subtitle size for mobile */
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* Adjust height for mobile */
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .nav-links {
+        justify-content: center; /* Center navigation links */
+        gap: 10px;
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        width: 100%; /* Make sure the links take full width */
+    }
+
+    .nav-links li {
+        margin: 5px; /* Add margin to space out navigation links */
+        justify-content: center; /* Center navigation links */
+    }
+
+    .projects, .education {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.project.exo-ash {
+    animation: slideInLeft 1s ease-out;
+}
+
+.project.linguist {
+    animation: slideInLeft 1s ease-out;
+}
+
+.project.purgatory {
+    animation: slideInRight 1s ease-out;
+}
+
+.project.knowyourmoney {
+    animation: slideInRight 1s ease-out;
+}
